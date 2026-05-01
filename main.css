@@ -52,16 +52,17 @@ a:focus {
 }
 
 .page {
-    max-width: 1040px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 44px 24px 24px;
     display: grid;
-    grid-template-columns: 230px minmax(0, 1fr);
-    gap: 64px;
+    grid-template-columns: 220px minmax(0, 1fr) 260px;
+    gap: 44px;
     align-items: start;
 }
 
-.profile {
+.profile,
+.news-panel {
     position: sticky;
     top: 28px;
 }
@@ -96,7 +97,7 @@ a:focus {
 }
 
 .content {
-    max-width: 760px;
+    max-width: 690px;
 }
 
 .section {
@@ -135,6 +136,27 @@ p {
     margin-bottom: 16px;
 }
 
+.news-panel {
+    border-left: 1px solid var(--line);
+    padding-left: 24px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.news-panel h2 {
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+}
+
+.news-panel .news-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.news-panel .news-list li {
+    margin-bottom: 14px;
+}
+
 .news-list time {
     display: block;
     color: var(--muted);
@@ -171,9 +193,15 @@ p {
         display: block;
     }
 
-    .profile {
+    .profile,
+    .news-panel {
         position: static;
         margin-bottom: 34px;
+    }
+
+    .news-panel {
+        border-left: 0;
+        padding-left: 0;
     }
 
     .profile-photo {
